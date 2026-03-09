@@ -1,0 +1,365 @@
+syntax = "proto3";
+
+option csharp_namespace = "Optical.HMI.Autocollimator.Grpc";
+
+import "google/protobuf/duration.proto";  
+import "google/protobuf/empty.proto";
+
+package autocollimator;
+
+// Autocollimator API service definition.
+service Autocollimatorh
+{
+    // Constructors
+    // Autocollimator APIの新しいインスタンスを生成します。
+    rpc GenerateInstanceNotify (SensorDevice) returns (NotifyReply);
+
+
+    // Events
+    // 画像データが更新された場合にイベントが発生します。
+    rpc NewFrameEvent (google.protobuf.Empty) returns (stream BufferUpdated);
+
+    // 計算結果が更新された場合にイベントが発生します。
+    rpc NewResultEvent (google.protobuf.Empty) returns (stream BufferUpdated);
+
+
+    // Properties
+    // 移動平均の平均化回数を取得・設定します。
+    rpc AveragingTimesRequest (google.protobuf.Empty) returns (Averaging);
+    rpc AveragingTimesNotify (Averaging) returns (NotifyReply);
+
+    // 重心計算方法を取得・設定します。
+    rpc CentroidTypeRequest (google.protobuf.Empty) returns (CentroidType);
+    rpc CentroidTypeNotify (CentroidType) returns (NotifyReply);
+
+    // 内部光源を使用するかどうかを示す値を取得・設定します。
+    rpc InternalLightSourceRequest (google.protobuf.Empty) returns (LightSource);
+    rpc InternalLightSourceNotify (LightSource) returns (NotifyReply);
+
+    /// 最新の測定結果が格納されたバッファを取得します。
+    rpc LatestBufferRequest (google.protobuf.Empty) returns (BufferReply);
+
+    // 複数の光点を個別に測定するかどうかを示す値を取得・設定します。
+    rpc MultiModeRequest (google.protobuf.Empty) returns (MeasureMode);
+    rpc MultiModeNotify (MeasureMode) returns (NotifyReply);
+
+    // 対象領域の範囲[pixel]を取得・設定します。
+    rpc RoiRequest (google.protobuf.Empty) returns (TargetArea);
+    rpc RoiNotify (TargetArea) returns (NotifyReply);
+
+    // 最新の測定角度[deg]を取得します。
+    rpc TiltRequest (google.protobuf.Empty) returns (TiltReply);    
+
+    // 自動露光時間調整の動作可否を取得・設定します。
+    rpc AutoExposureRequest (google.protobuf.Empty) returns (AutoExposure);
+    rpc AutoExposureNotify (AutoExposure) returns (NotifyReply);
+    
+    // 自動ゲイン調整調整の動作可否を取得・設定します。
+    rpc AutoGainRequest (google.protobuf.Empty) returns (AutoGain);
+    rpc AutoGainNotify (AutoGain) returns (NotifyReply);
+
+    // ビニングする一辺のピクセル数を取得・設定します。
+    rpc BinningRequest (google.protobuf.Empty) returns (Binning);
+    rpc BinningNotify (Binning) returns (NotifyReply);
+
+    // ビニング時のピクセル値算出方法を取得・設定します。
+    rpc BinningModeRequest (google.protobuf.Empty) returns (BinningMode);
+    rpc BinningModeNotify (BinningMode) returns (NotifyReply);
+
+    // 画像データのビット深度を取得・設定します
+    rpc BitDepthRequest (google.protobuf.Empty) returns (BitDepth);
+    rpc BitDepthNotify (BitDepth) returns (NotifyReply);
+
+    // イメージセンサーの黒レベルを取得・設定します。
+    rpc BlackLevelRequest (google.protobuf.Empty) returns (BlackLevel);
+    rpc BlackLevelNotify (BlackLevel) returns (NotifyReply);
+
+    // デバイス情報を取得します。
+    rpc DeviceRequest (google.protobuf.Empty) returns (SensorComponentsReply);
+
+    // イメージセンサーの露光時間[ms]を取得・設定します。
+    rpc ExposureTimeRequest (google.protobuf.Empty) returns (ExposureTime);
+    rpc ExposureTimeNotify (ExposureTime) returns (NotifyReply);
+
+    // 露光時間の設定範囲[ms]
+    rpc ExposureTimeRangeRequest (google.protobuf.Empty) returns (ExposureTimeRangeReply);
+
+    // 画像の水平方向のミラーリングを有効にします。
+    rpc FlipHorizontalRequest (google.protobuf.Empty) returns (FlipHorizontal);
+    rpc FlipHorizontalNotify (FlipHorizontal) returns (NotifyReply);
+
+    // 画像の垂直方向のミラーリングを有効にします。
+    rpc FlipVerticalRequest (google.protobuf.Empty) returns (FlipVertical);
+    rpc FlipVerticalNotify (FlipVertical) returns (NotifyReply);
+
+    // 画像データの更新周期[Hz]を取得・設定します。
+    rpc FrameRateRequest (google.protobuf.Empty) returns (FrameRate);
+    rpc FrameRateNotify (FrameRate) returns (NotifyReply);
+
+    // 画像データの更新周期の設定範囲[Hz]
+    rpc FrameRateRangeRequest (google.protobuf.Empty) returns (FrameRateRangeReply);
+
+    // イメージセンサーのゲイン[dB]を取得・設定します。
+    rpc GainRequest (google.protobuf.Empty) returns (Gain);
+    rpc GainNotify (Gain) returns (NotifyReply);
+
+    // ゲインの設定範囲[dB]
+    rpc GainRangeRequest (google.protobuf.Empty) returns (GainRangeReply);
+
+    // イメージセンサーの画面解像度[pixel]を取得します。
+    rpc SensorSizeRequest (google.protobuf.Empty) returns (SensorSizeReply);
+
+    // トリガー受信後、トリガーがアクティブになるまでの時間を取得・設定します。[ms]
+    rpc TriggerDelayRequest (google.protobuf.Empty) returns (TriggerDelay);
+    rpc TriggerDelayNotify (TriggerDelay) returns (NotifyReply);
+
+    // トリガーモードで動作するどうかを示す値を取得・設定します。
+    rpc TriggerModeRequest (google.protobuf.Empty) returns (TriggerMode);
+    rpc TriggerModeNotify (TriggerMode) returns (NotifyReply);
+
+    // トリガーモード動作時の入力タイプを取得・設定します。
+    rpc TriggerTypeRequest (google.protobuf.Empty) returns (TriggerType);
+    rpc TriggerTypeNotify (TriggerType) returns (NotifyReply);
+
+
+    // Methods
+    // デバイスの使用を停止します。
+    rpc CloseNotify (google.protobuf.Empty) returns (NotifyReply);
+
+    // デバイスの使用を開始します。
+    rpc OpenNotify (google.protobuf.Empty) returns (NotifyReply);
+
+    // デバイスを測定開始状態にします。
+    rpc StartNotify (google.protobuf.Empty) returns (NotifyReply);
+
+    // デバイスの測定を停止します。
+    rpc StopNotify (google.protobuf.Empty) returns (NotifyReply);
+}
+
+service Camera
+{
+    // センサーデバイス一覧を列挙します。
+    rpc EnumerateDeviceRequest (google.protobuf.Empty) returns (EnumerateDeviceReply);
+}
+
+message SensorDevice
+{
+    string connection_type = 1;
+    string device_id = 2;
+    string key = 3;
+    string model_name = 4;
+    string serial_number = 5;
+    string vendor_name = 6;
+}
+
+message EnumerateDeviceReply
+{
+    repeated SensorDevice devices = 1;
+}
+
+message Instance
+{
+    SensorDevice device = 1;
+}
+
+message NotifyReply
+{
+    bool result = 1;
+}
+
+message BufferUpdated
+{
+    int32 target_index = 1;
+}
+
+message Angle
+{
+	double x = 1;
+	double y = 2;
+}
+
+message Averaging
+{
+    int32 times = 1;
+}
+
+enum CentroidAnalysis
+{
+    CENTROID_ANALYSIS_AREA = 0;
+    CENTROID_ANALYSIS_LUMINANCE = 1;
+}
+
+message CentroidType
+{
+    CentroidAnalysis centroid = 1;
+}
+
+message LightSource
+{
+    bool enable_internal = 1;
+}
+
+message BufferReply
+{
+    bool is_completed = 1;
+    ImageContainer image = 2;
+    repeated Angle tilts = 3;
+}
+
+message ImageContainer
+{
+    string id = 1;
+    google.protobuf.Duration timestamp = 2;
+    int32 frame_number = 3;
+    int32 height = 4;
+    int32 width = 5;
+    int32 bit_depth = 6;
+    message ImageComponent
+    {
+        int32 bit_depth = 1;
+        bytes Pixels = 2;
+        int32 height = 3;
+        int32 width = 4;
+    }
+
+    ImageComponent raw_data = 7;
+}
+
+message MeasureMode
+{
+    bool multi_mode = 1;
+}
+
+message TargetArea
+{
+    message Rectangle
+    {
+        int32 top = 1;
+        int32 left = 2;
+        int32 height = 3;
+        int32 width = 4;
+    }
+
+    repeated Rectangle roi = 1;
+}
+
+message TiltReply
+{
+    repeated Angle tilt = 1;
+}
+
+message AutoExposure
+{
+    bool enabled = 1;
+}
+
+message AutoGain
+{
+    bool enabled = 1;
+}
+
+message Binning
+{
+    int32 pixel_count = 1;
+}
+
+enum PixelFormat
+{
+    PIXEL_FORMAT_AVERAGE = 0;
+    PIXEL_FORMAT_SUM = 1;
+}
+
+message BinningMode
+{
+    PixelFormat format = 1;
+}
+
+message BitDepth
+{
+    int32 value = 1;
+}
+
+message BlackLevel
+{
+    double value = 1;
+}
+
+message SensorComponentsReply
+{
+    string connection_type = 1;
+    string device_id = 2;
+    string key = 3;
+    string model_name = 4;
+    string serial_number = 5;
+    string vendor_name = 6;
+}
+
+message ExposureTime
+{
+    double value = 1;
+}
+
+message ExposureTimeRangeReply
+{
+    double maximum = 1;
+    double minimum = 2;
+}
+
+message FlipHorizontal
+{
+    bool enabled = 1;
+}
+
+message FlipVertical
+{
+    bool enabled = 1;
+}
+
+message FrameRate
+{
+    double value = 1;
+}
+
+message FrameRateRangeReply
+{
+    double maximum = 1;
+    double minimum = 2;
+}
+
+message Gain
+{
+    double value = 1;
+}
+
+message GainRangeReply
+{
+    double maximum = 1;
+    double minimum = 2;
+}
+
+message SensorSizeReply
+{
+    int32 height = 1;
+    int32 width = 2;
+}
+
+message TriggerDelay
+{
+    double delay_time = 1;
+}
+
+message TriggerMode
+{
+    bool enabled = 1;
+}
+
+enum TriggerOperation
+{
+    TRIGGER_OPERATION_HARDWARE = 0;
+    TRIGGER_OPERATION_SOFTWARE = 1;
+}
+
+message TriggerType
+{
+    TriggerOperation type = 1;
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autocollimator", "Optical.API.Autocollimator\Autocollimator.csproj", "{DDE9DFD0-AC7A-4283-84CD-85ED52DCF763}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDE9DFD0-AC7A-4283-84CD-85ED52DCF763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE9DFD0-AC7A-4283-84CD-85ED52DCF763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE9DFD0-AC7A-4283-84CD-85ED52DCF763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE9DFD0-AC7A-4283-84CD-85ED52DCF763}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E89EEB16-5B55-4FD1-AE66-108D01B59C6E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optical.Core.Camera", "Optical.Core.Camera\Optical.Core.Camera.csproj", "{6FE8C171-8B7D-4590-A808-5E0D78345C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Core.Camera", "Test.Core.Camera\Test.Core.Camera.csproj", "{54E4DA72-26AD-4148-812F-B690C3D70A16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FE8C171-8B7D-4590-A808-5E0D78345C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE8C171-8B7D-4590-A808-5E0D78345C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE8C171-8B7D-4590-A808-5E0D78345C12}.Debug|x64.ActiveCfg = Debug|x64
+		{6FE8C171-8B7D-4590-A808-5E0D78345C12}.Debug|x64.Build.0 = Debug|x64
+		{6FE8C171-8B7D-4590-A808-5E0D78345C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE8C171-8B7D-4590-A808-5E0D78345C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE8C171-8B7D-4590-A808-5E0D78345C12}.Release|x64.ActiveCfg = Release|x64
+		{6FE8C171-8B7D-4590-A808-5E0D78345C12}.Release|x64.Build.0 = Release|x64
+		{54E4DA72-26AD-4148-812F-B690C3D70A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E4DA72-26AD-4148-812F-B690C3D70A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E4DA72-26AD-4148-812F-B690C3D70A16}.Debug|x64.ActiveCfg = Debug|x64
+		{54E4DA72-26AD-4148-812F-B690C3D70A16}.Debug|x64.Build.0 = Debug|x64
+		{54E4DA72-26AD-4148-812F-B690C3D70A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E4DA72-26AD-4148-812F-B690C3D70A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E4DA72-26AD-4148-812F-B690C3D70A16}.Release|x64.ActiveCfg = Release|x64
+		{54E4DA72-26AD-4148-812F-B690C3D70A16}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8650E0A-8653-4156-B51C-A9C084790919}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1231
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optical.Platform.Mathematics", "Optical.Platform.Mathematics\Mathematics.csproj", "{AFAD2130-C483-4A75-AFD2-973C78701602}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFAD2130-C483-4A75-AFD2-973C78701602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAD2130-C483-4A75-AFD2-973C78701602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAD2130-C483-4A75-AFD2-973C78701602}.Debug|x64.ActiveCfg = Debug|x64
+		{AFAD2130-C483-4A75-AFD2-973C78701602}.Debug|x64.Build.0 = Debug|x64
+		{AFAD2130-C483-4A75-AFD2-973C78701602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAD2130-C483-4A75-AFD2-973C78701602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAD2130-C483-4A75-AFD2-973C78701602}.Release|x64.ActiveCfg = Release|x64
+		{AFAD2130-C483-4A75-AFD2-973C78701602}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B2547B8-330D-466C-A250-6A8358A187A7}
+	EndGlobalSection
+EndGlobal

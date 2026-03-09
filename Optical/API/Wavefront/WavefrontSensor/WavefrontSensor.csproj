@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Camera\Optical.Core.Camera\Camera.csproj" />
+    <ProjectReference Include="..\..\..\Platform\Mathematics\Optical.Platform.Mathematics\Mathematics.csproj" />
+    <ProjectReference Include="..\..\..\Platform\Types\Optical.Platform.Types\Types.csproj" />
+    <ProjectReference Include="..\..\Library\Device\Device.csproj" />
+    <ProjectReference Include="..\..\Library\ImageProcessing\ImageProcessing\ImageProcessing.csproj" />
+  </ItemGroup>
+
+</Project>

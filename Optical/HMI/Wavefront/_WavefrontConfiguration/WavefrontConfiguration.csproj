@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Optical.HMI.Wavefront</RootNamespace>
+    <StartupObject />
+    <AssemblyTitle>Optical.HMI.Wavefront.Properties</AssemblyTitle>
+    <Product>Optical.HMI.Wavefront.Properties</Product>
+    <Copyright>Copyright ©  2025</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DocumentationFile>bin\Debug\WavefrontConfiguration.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\API\Library\Device\Device.csproj" />
+    <ProjectReference Include="..\..\..\API\Library\Optics\Optics\Optics.csproj" />
+    <ProjectReference Include="..\..\..\API\Wavefront\WavefrontSensor\WavefrontSensor.csproj" />
+    <ProjectReference Include="..\..\..\Platform\Types\Optical.Platform.Types\Types.csproj" />
+  </ItemGroup>
+</Project>

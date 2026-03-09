@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\API\Library\Device\Device.csproj" />
+    <ProjectReference Include="..\..\..\Platform\Types\Optical.Platform.Types\Types.csproj" />
+    <ProjectReference Include="..\Optical.Core.Camera\Camera.csproj" />
+  </ItemGroup>
+
+</Project>
